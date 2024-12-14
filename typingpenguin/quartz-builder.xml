@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/182469-support-quartz-builder/</Support>
   <Project>https://github.com/TypingPenguin/quartz_builder</Project>
   <Overview>Implementation of Quartz static site generator (https://github.com/jackyzha0/quartz) + ExpressJS hosting . This can be used to make a static website from your Obsidian vault.&#xD;
 &#xD;
