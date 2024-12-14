@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>quartz-builder</Name>
+  <Repository>typingpenguin/quartz_builder</Repository>
+  <Registry>https://github.com/TypingPenguin/docker-templates/blob/main/typingpenguin/quartz_builder.xml</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/TypingPenguin/quartz_builder</Project>
+  <Overview>Implementation of Quartz static site generator (https://github.com/jackyzha0/quartz) + ExpressJS hosting . This can be used to make a static website from your Obsidian vault.&#xD;
+&#xD;
+I have not created Quartz, this is purely a service to host it in Unraid.</Overview>
+  <Category>Cloud: Productivity: Tools: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/TypingPenguin/docker-templates/blob/main/typingpenguin/icons/quartz-builder-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1734186060</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>None</Requires>
+  <Config Name="Vault location" Target="/vault" Default="" Mode="ro" Description="The location of the vault of the user" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/obsidian/vaults/PenguinVault/</Config>
+  <Config Name="Output folder location" Target="/output" Default="/mnt/user/appdata/quartz_builder/output" Mode="rw" Description="The location where the html files will be exported (for example in /appdata/nginx/www/ if you use nginx to host the files)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/quartz_builder/output</Config>
+  <Config Name="Vault folder name" Target="VAULT_DIR" Default="/vault" Mode="" Description="How we call the internal /vault folder (don't change)" Type="Variable" Display="always" Required="false" Mask="false">/vault</Config>
+  <Config Name="Output dir name" Target="OUTPUT_DIR" Default="/output" Mode="" Description="How we call the internal /output folder (don't change)" Type="Variable" Display="always" Required="false" Mask="false">/output</Config>
+  <Config Name="Timer" Target="TIMER" Default="20" Mode="" Description="Time that has to be inbetween changes to the documents in the watched folders before we run the build pipeline" Type="Variable" Display="always" Required="false" Mask="false">5</Config>
+  <Config Name="Folder to watch" Target="FOLDER" Default="/public" Mode="" Description="The folder in your obsidian vault you want to output (default is /public, leave empty for root)" Type="Variable" Display="always" Required="false" Mask="false">/public</Config>
+  <Config Name="Port for expressJS" Target="3000" Default="3000" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9543</Config>
+</Container>
